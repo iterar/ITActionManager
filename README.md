@@ -21,7 +21,7 @@ ITActionManager *actionManager = [[ITActionManager alloc] init];
 [actionManager addActionsResultHandler:^(float result) {
 	NSLog(@"Completed.");
 }];
-[actionManager performMethods:@[inv, inv2, inv3, inv, inv2, inv3]];
+[actionManager performMethods:@[inv, inv2]];
 ```
 
 Inspired by [Sebastien Windal](https://github.com/sebastienwindal) on [Callback handlers using blocks](https://github.com/sebastienwindal/iOSPatterns/wiki/Callback-handlers-using-blocks)
