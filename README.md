@@ -3,6 +3,21 @@ ITActionManager
 
 Method dispatcher and progress handler.
 
+### Installation with CocoaPods (Podfile)
+
+```ruby
+pod "ITActionManager"
+```
+
+### Manual installation
+
+Copy "ITActionManager" (and "NSInvocation+SimpleCreation" if you want to use the helper methods to build NSInvocation's) to your project and import when you want to use them.
+
+```objc
+#import "ITActionManager.h"
+#import "NSInvocation+SimpleCreation.h"
+```
+
 Example
 -------
 
