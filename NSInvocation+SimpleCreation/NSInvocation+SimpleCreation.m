@@ -24,12 +24,14 @@
 + (NSInvocation*)invocationWithTarget:(id)target selector:(SEL)selector andArguments:(NSArray *)arguments {
     
     NSInvocation *inv = [NSInvocation invocationWithTarget:target andSelector:selector];
+    
     int argumentIndex = 2;
-    for (id argument in arguments) {
-        void *argument = &argument;
-        [inv setArgument:argument atIndex:argumentIndex];
+    for (int i = 0; i < arguments.count; i++) {
+        id argument = [arguments objectAtIndex:i];
+        [inv setArgument:&argument atIndex:argumentIndex];
         argumentIndex += 1;
     }
+    [inv retainArguments];
     
     return inv;
     
